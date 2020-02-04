@@ -87,17 +87,6 @@ namespace SortingApplication
 
                 var qsobjListOriginal = JsonConvert.DeserializeObject<List<QSObj>>(json);
 
-                //qsobjListOriginal.Sort();
-
-
-                var x = new List<QSObj>();
-                foreach (var i in qsobjListOriginal)
-                {
-                    //var qsObj = $@"{i.NumberProp}, {i.StringProp}, {i.NumberProp}";
-                    //Console.WriteLine(qsObj);
-                    x.Add(i);
-                }
-                Console.WriteLine(x.OrderByDescending(a => a.DoubleProp).FirstOrDefault().NumberProp);
 
                 //So logically, there are 3 properties that we must sort by
                 var properties = new List<string>() { "NumberProp", "StringProp", "DoubleProp" };
